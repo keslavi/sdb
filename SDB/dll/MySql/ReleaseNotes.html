@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title></title>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+</head>
+<body>
+<h1>Release Notes</h1>
+<h2>Version 0.76 - 3/12/04</h2>
+<ul>
+
+	<li>Renamed assembly to ByteFX.MySqlClient.dll</li>
+	<li>Moved all design components into MySqlClient.Design</li>
+	<li>Supporting 2,4, & 8 byte integer lengths from MySQL</li>
+	<li>Better support for compression using the CompressedStream class</li>
+	<li>Pooling now using the PING command to determine if MySQL is alive</li>
+	<li>Fields now read values directly out of the rowset buffer.  This should speed up operations on multiple rows with blobs</li>
+	<li>Fixed bug where connecting to a down or non-existent server would not timeout</li>
+	<li>Improved connection string handling.  Now if there is a problem with the connection string, then the existing connection string is not changed.</li>
+	<li>Fixed connection object where an exception throw prior to the connection opening would not leave
+        the connection in the connecting state</li>
+	<li>Added GUID support</li>
+	<li>Fixed sequence out of order bug (thanks Mark Reay)</li>
+	<li>And many more improvements that I can't think of right now....</li>
+</ul>
+<br/>
+<h2>Version 0.75 - 1/27/04</h2>
+<UL>
+  <LI>MySQL year datatype is now supported and handled internally as a 32 bit 
+  integer</LI>
+  <LI>Compression is now working again!!!&nbsp; Use compress=true on your 
+  connection string to enable this</LI>
+  <LI>Parameters with values that were of type System.TimeSpan or System.Enum 
+  are now handled correctly</LI>
+  <LI>Improved connection string handling.&nbsp; Specifically, defaults are 
+  handled better and the behavior more closely matches that of SqlClient.&nbsp; 
+  If you specify a connection string that has a syntax error, the old connection 
+  string values should not be overwritten.</LI>
+  <LI>A MySqlException is now thrown if a user id is not included in the 
+  connection string.&nbsp; </LI>
+  <LI>Localhost is now used if server is not specified on the connection 
+  string</LI>
+  <LI>Leaving password= out of the connection string now works properly</LI>
+  <LI>A MySqlException is now thrown if an attempt is made to set the connection 
+  string while the connection is open.</LI>
+  <LI>Removed MultiHostStream and MySqlStream and replaced it with 
+  Common/StreamCreator that creates the appropriate stream based on 
+  inputs.&nbsp; </LI>
+  <LI>Speed is greatly improved due to better handling of network 
+  connection.</LI>
+  <LI>A pipe connection is now used when you specify Use Pipe=true on the 
+  connection string.&nbsp; Note that this replaces the older method of selecting 
+  pipes by specifying -1 as the port.</LI>
+  <LI>Fixed some pooling bugs!!&nbsp; The provider should recover better from 
+  closed or timed out connections.</LI>
+  <LI>Much more testing!!</LI>
+  <LI>MySql 4.1 style timestamps are now handled</LI>
+  <LI>MySqlException now includes the error number returned from the server</LI>
+  <LI>Text blob columns are now returned as string data 
+types.</LI></UL>
+
+
+
+</body>
+</html>
