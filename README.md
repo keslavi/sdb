@@ -54,14 +54,11 @@ Most of the time you'll want to Build and use /bin/*.dll in a seperate project.
 
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+See Usage for base examples. will include a sample web app at some point. 
+
 
 ## Running the tests
 TBD| n/a
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
 
 ## Deployment
 
