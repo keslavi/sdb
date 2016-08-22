@@ -508,7 +508,7 @@
 //#endregion
 //#region Sql Script retrieval
 //		/// <summary>
-//		/// read a script file from Script\sql
+//		/// read a script file from scripts\sql
 //		/// </summary>
 //		/// <param name="sqlFileName"></param>
 //		/// <returns></returns>
@@ -523,7 +523,7 @@
 //			{
 //				//if there is no partial path info then add the default
 //				if (sqlFileName.IndexOf(@"\") == -1 & sqlFileName.IndexOf("/") == -1)
-//					sqlFileName=@"script\sql\IBM\" + sqlFileName;
+//					sqlFileName=@"scripts\sql\IBM\" + sqlFileName;
 
 //				if (System.IO.File.Exists(SDB.Common.Properties.Root + sqlFileName))
 //					sqlFileName = SDB.Common.Properties.Root + sqlFileName;

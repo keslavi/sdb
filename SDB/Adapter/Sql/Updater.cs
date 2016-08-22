@@ -40,7 +40,7 @@ namespace SDB.Adapter.SQL
 			{
 				if (dirScript=="")
 				{
-					string p=Common.Properties.Root + @"script\sql\updater\";
+					string p=Common.Properties.Root + @"scripts\sql\updater\";
 					if (File.Exists(p + "_Script.txt"))
 						dirScript=p;
 					else
@@ -129,7 +129,7 @@ namespace SDB.Adapter.SQL
 			{
 				//if there is no partial path info then add the default
 				if (Path.IndexOf(@"\") == -1 & Path.IndexOf("/") == -1)
-					Path = @"script\sql\Updater\" + Path;
+					Path = @"scripts\sql\Updater\" + Path;
 
 				if (System.IO.File.Exists(SDB.Common.Properties.Root + Path))
 					Path = SDB.Common.Properties.Root + Path;

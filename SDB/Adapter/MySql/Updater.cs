@@ -39,7 +39,7 @@
 //			{
 //				if (dirScript=="")
 //				{
-//					string p=Common.Properties.Root + @"script\sql\sql\updater\";
+//					string p=Common.Properties.Root + @"scripts\sql\sql\updater\";
 //					if (File.Exists(p + "_Script.txt"))
 //						dirScript=p;
 //					else
@@ -128,7 +128,7 @@
 //			{
 //				//if there is no partial path info then add the default
 //				if (Path.IndexOf(@"\") == -1 & Path.IndexOf("/") == -1)
-//					Path = @"script\sql\SQL\Updater" + Path;
+//					Path = @"scripts\sql\SQL\Updater" + Path;
 
 //				if (System.IO.File.Exists(SDB.Common.Properties.Root + Path))
 //					Path = SDB.Common.Properties.Root + Path;
